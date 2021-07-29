@@ -143,3 +143,8 @@ button:hover{
     height:90%;
   }
 }
+@media(orientation: portrait){
+  .cardbox{
+    height:450px;
+  }
+}
