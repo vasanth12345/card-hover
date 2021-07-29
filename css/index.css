@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=WindSong:wght@500&display=swap');
+
+:root{
+font-family: 'Hind Siliguri', sans-serif;
+font-family: 'WindSong', cursive;
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+body{
+  height:90vh;
+  width:100%;
+  background:linear-gradient(130deg, #91e9ff, #d5f5fe);
+  display:grid;
+  place-items:center;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.cardbox{
+  width:80%;
+  height:70%;
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+.card{
+  box-shadow:5px 10px 10px #000;
+  width:90%;
+  height:90%;
+  background:url("/blue.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  flex-direction:column;
+  position:relative;
+}
+
+.btm{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:50%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  flex-direction:column;
+}
+
+img{
+  width:60px;
+}
+/*_______________________________*/
+
+/*
+.cardbox:hover .card{
+  transform:rotateY(0.5turn);
+}*/
+
+.card{
+  transform-style:preserve-3d;
+  border-radius:15px;
+}
+.title{
+  position:relative;
+  padding:5px;
+  color:#fff;
+  text-shadow:0 0 3px #8fe7fd,
+              0 0 5px #8fe7fd,
+              0 0 7px #8fe7fd;
+  font-family: 'WindSong', cursive;
+}
+.stitle{
+  font-weight:bold;
+  font-size:30px;
+  text-shadow:0 0 3px #000;
+}
+button{
+ transition:0.3s;
+  padding:5px 15px;
+  background:#fff;
+  color:#000;
+  font-weight:bold;
+  border:2px solid white ;
+  outline:none;
+  border-radius:15px;
+  transform: translateZ(30px);
+}
+button:hover{
+  background:none;
+  color:#fff;
+}
+.ice{
+  position:absolute;
+  width:60px;
+  bottom:10px;
+  left:10px;
+  transition:0.5s;
+}
+.cardbox:hover .ice{
+ transform: translateZ(40px) rotate(30deg);
+}
+.title:before{
+  position:absolute;
+  content:'';
+  bottom: -5px;
+  left:50%;
+  width:70px;
+  height:3.5px;
+  transform:scaleX(0) translateX(-50%);
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 0 4px #00bcff,
+             0 0 5px #00bcff,
+             0 0 6px #00bcff;
+  transition:transform 0.3s;
+}
+.cardbox:hover .title:before{
+  transform:scaleX(1) translateX(-50%);
+}
+
+/*_______________________________*/
+
+
+
+
+
+@media(min-width:700px){
+  body{
+    height:100vh;
+  }
+  .cardbox{
+    width:40%;
+    height:90%;
+  }
+  .card{
+    width:70%;
+    height:90%;
+  }
+}
